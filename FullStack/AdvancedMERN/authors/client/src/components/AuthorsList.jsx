@@ -17,7 +17,7 @@ const AuthorsList = props => {
 
     return (
         <div>
-            <Link to="/authors/create">Add an author</Link>
+            <Link to="/authors/new">Add an author</Link>
             {list && 
                 <div>
                     <table style={tableStyle}>
@@ -35,7 +35,7 @@ const AuthorsList = props => {
                                                 authors={list}
                                                 setAuthors={setAuthors}
                                             />
-                                            <Link to={`/authors/update/${author._id}`}>
+                                            <Link to={`/authors/edit/${author._id}`}>
                                                 <button>Edit</button>
                                             </Link>
                                         </td>

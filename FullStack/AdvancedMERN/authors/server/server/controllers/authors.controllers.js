@@ -13,7 +13,7 @@ module.exports.createAuthor = (req,res) => {
 }
 
 module.exports.deleteAuthor = (req,res) => {
-    Author.remove({_id: req.params.id})
+    Author.findByIdAndDelete ({_id: req.params.id})
         .then(response => res.json({response: response}))
         .catch(err => res.status(400).json({message:"wrong in Author.deleteAuthor()", error:err}))
 }
