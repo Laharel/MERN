@@ -1,0 +1,27 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
+import ProductList from './ProductList'
+import ProductForm from './ProductForm'
+import EditForm from './EditForm';
+import {Router} from '@reach/router'
+
+const Products = props => {
+    const [products, setProducts] = useState([{}])
+    // product data received after posting new product
+    const [newProduct, setNewProduct] = useState("")
+    const [product, setProduct] = useState({
+        title:"",
+        price:10,
+        description: "",
+    })
+
+    return (
+        <div>
+            <ProductForm setNewProduct={setNewProduct} product={product} setProduct={setProduct}/>
+                <ProductList newProduct={newProduct} products={products} setProducts={setProducts}/>
+        </div>
+    );
+};
+
+
+export default Products;
