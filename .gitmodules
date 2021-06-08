@@ -1,0 +1,3 @@
+[submodule "mern-hackathoon"]
+	path = mern-hackathoon
+	url = https://github.com/Laharel/mern-hackathoon
