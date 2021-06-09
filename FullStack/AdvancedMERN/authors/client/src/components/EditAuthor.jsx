@@ -18,14 +18,14 @@ const EditAuthor = props => {
 
     const handleUpdate = (e) =>{
         e.preventDefault()
-        axios.put(`http://localhost:8000/api/authors/update/${id}`, {name:name})
+        axios.put(`http://localhost:8000/api/authors/edit/${id}`, {name:name})
             .then(response => {
                 console.log(response.data.author)
                 authors.map((author,idx) => {
                     if(author._id == id){
-                        let tmpArr = [...authors]
-                        tmpArr[idx] = response.data.author
-                        setAuthors(tmpArr)
+                        let arr = [...authors]
+                        arr[idx] = response.data.author
+                        setAuthors(arr)
                         navigate("/")
 
                     }

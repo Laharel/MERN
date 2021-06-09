@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Router, Link} from '@reach/router'
+import {Router} from '@reach/router'
 import axios from 'axios'
 import AuthorsList from './AuthorsList';
 import CreateAuthor from './CreateAuthor';
@@ -26,8 +26,8 @@ const AuthorsMain = props => {
             <h1>Favourite Authors</h1>
             <Router>
                 <AuthorsList path="/" authors={authors} setAuthors={setAuthors} />
-                <CreateAuthor path="/authors/create" authors={authors} setAuthors={setAuthors} />
-                <EditAuthor path="/authors/update/:id" authors={authors} setAuthors={setAuthors} />
+                <CreateAuthor path="/authors/new" authors={authors} setAuthors={setAuthors} />
+                <EditAuthor path="/authors/edit/:id" authors={authors} setAuthors={setAuthors} />
             </Router>
         </div>
     );

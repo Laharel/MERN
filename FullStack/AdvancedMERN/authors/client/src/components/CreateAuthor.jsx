@@ -10,7 +10,7 @@ const CreateAuthor = props => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post(`http://localhost:8000/api/authors/create`, {name: name})
+        axios.post(`http://localhost:8000/api/authors/new`, {name: name})
             .then(newAuthor => {
                 setAuthors([...authors, newAuthor.data.author])
                 navigate("/")
