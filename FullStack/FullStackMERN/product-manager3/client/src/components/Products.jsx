@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+import React, { useState } from 'react';
 import ProductList from './ProductList'
 import ProductForm from './ProductForm'
-import EditForm from './EditForm';
-import {Router} from '@reach/router'
 
 const Products = props => {
     const [products, setProducts] = useState([{}])
