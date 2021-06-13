@@ -1,3 +1,6 @@
 [submodule "mern-hackathoon"]
 	path = mern-hackathoon
 	url = https://github.com/Laharel/mern-hackathoon
+[submodule "Project/Project/photography-system"]
+	path = Project/Project/photography-system
+	url = https://github.com/Laharel/photography-system.git
